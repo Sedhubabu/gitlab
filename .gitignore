@@ -1,0 +1,92 @@
+# ===========================================================
+#  GitLab clone — root .gitignore
+#  (client/ has its own .gitignore for Vite/React output)
+#  Note: gitignore has no inline comments — keep comments on their own line.
+# ===========================================================
+
+# ---------- Secrets / environment ----------
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Test / tooling caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+
+# ---------- Django ----------
+# Local SQLite database
+*.sqlite3
+*.sqlite3-journal
+
+# User uploads (avatars, attachments)
+src/media/
+
+# collectstatic output
+src/staticfiles/
+
+# Bare git repositories created by the app (GIT_REPOS_ROOT)
+src/repos/
+
+# Logs
+*.log
+logs/
+
+# Migrations ARE committed (every developer/server must run the same ones).
+# Their caches are already ignored by __pycache__/ above.
+
+# ---------- Node / client (backup rules; client/.gitignore is primary) ----------
+node_modules/
+client/dist/
+client/.pnp.cjs
+client/.pnp.loader.mjs
+client/.yarn/install-state.gz
+client/.yarnrc.yml
+# Project uses pnpm (pnpm-lock.yaml is committed); ignore stray yarn lockfiles.
+client/yarn.lock
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ---------- Local scripts / scratch ----------
+run_celery_worker.sh
+run_celery_beat.sh
+docs/
+treee.txt
+
+# ---------- Editors / OS ----------
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ---------- Claude Code (local, per-developer settings) ----------
+.claude/settings.local.json
+client/.claude/settings.json
