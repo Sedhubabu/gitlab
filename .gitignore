@@ -55,8 +55,10 @@ src/repos/
 *.log
 logs/
 
-# Migrations ARE committed (every developer/server must run the same ones).
-# Their caches are already ignored by __pycache__/ above.
+# Migrations are NOT committed: each environment generates its own with
+# `makemigrations`. Keep __init__.py so the migrations package exists.
+src/*/migrations/*
+!src/*/migrations/__init__.py
 
 # ---------- Node / client (backup rules; client/.gitignore is primary) ----------
 node_modules/
