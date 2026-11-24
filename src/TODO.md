@@ -14,8 +14,8 @@ Work top to bottom: each phase builds on the one before it. Each phase ends with
 - [x] GitLab-style `User` model + manager (username/email login)
 - [x] User admin (filters, state actions, audit log)
 - [X] Run `makemigrations` + `migrate`, create superuser
-- [ ] `git init` the project, add `.gitignore` (venv, db.sqlite3, .env, media/, repos/)
-- [ ] Add `.env.example` (no real secrets)
+- [X] `git init` the project, add `.gitignore` (venv, db.sqlite3, .env, media/, repos/)
+- [X] Add `.env.example` (no real secrets)
 - [ ] `core`: standard API response format, custom exception handler, pagination class
 - [ ] `core`: `GIT_REPOS_ROOT` setting (where bare repos live on disk)
 - [ ] Set up tests (`pytest-django` or Django test runner) + `ruff` for lint
